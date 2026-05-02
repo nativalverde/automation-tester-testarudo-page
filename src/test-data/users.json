@@ -1,0 +1,11 @@
+{
+    "adminUser": {
+        "email": "mledezma@testertestarudo.com"
+    },
+    "studentUser": {
+        "email": "testcompra@yopmail.com"
+    },
+    "notValidUser": {
+        "email": "mledezma@testertestarudo.com"
+    }
+}
