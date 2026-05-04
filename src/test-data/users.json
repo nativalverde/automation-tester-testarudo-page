@@ -7,5 +7,13 @@
     },
     "notValidUser": {
         "email": "mledezma@testertestarudo.com"
+    },
+    "newUser": {
+        "name": "Nata Test"
+    },
+    "registeredUser": {
+        "name": "Nata Test",
+        "email": "nata@yopmail.com"
     }
+
 }

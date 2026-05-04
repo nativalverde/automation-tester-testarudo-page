@@ -4,6 +4,7 @@ import { Cookies } from '../components/cookiesModal/cookies';
 import { navBar } from '../components/navBar/navBar';
 import { DashboardPage } from '../pages/dashboard/dashboard.page';
 import { test as base } from '@playwright/test';
+import { RegisterPage } from '../pages/register/register.page';
 
 
 
@@ -12,6 +13,7 @@ type PageFixtures = {
   cookies: Cookies;
   menu: navBar;
   dashboardPage: DashboardPage;
+  registerPage: RegisterPage;
 }
 
 export const test = base.extend<PageFixtures> (
@@ -30,6 +32,10 @@ export const test = base.extend<PageFixtures> (
 
         cookies: async({ page }, use) => {
             await use(new Cookies(page));
+        },
+
+        registerPage: async({ page }, use) => {
+            await use(new RegisterPage(page));
         },
     }
 );
