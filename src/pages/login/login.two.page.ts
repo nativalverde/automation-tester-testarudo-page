@@ -24,6 +24,11 @@ export class LoginPage {
         await this.page.getByTestId(L.submitButton).click();
     }
 
+    /*async clickRegister() {
+        //await this.page.getByTestId(L.submitButton).click();
+        await this.page.getByRole('link', { name: 'Regístrate aquí' }).click();
+    }*/
+
     async loginUser(user: string, password: string) {
         await this.fillEmail(user);
         await this.fillPassword(password);
