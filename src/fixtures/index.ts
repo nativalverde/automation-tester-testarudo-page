@@ -5,6 +5,7 @@ import { navBar } from '../components/navBar/navBar';
 import { DashboardPage } from '../pages/dashboard/dashboard.page';
 import { test as base } from '@playwright/test';
 import { RegisterPage } from '../pages/register/register.page';
+import { CoursesPage } from '../pages/course.page';
 
 
 
@@ -14,6 +15,7 @@ type PageFixtures = {
   menu: navBar;
   dashboardPage: DashboardPage;
   registerPage: RegisterPage;
+  coursePage: CoursesPage;
 }
 
 export const test = base.extend<PageFixtures> (
@@ -36,6 +38,10 @@ export const test = base.extend<PageFixtures> (
 
         registerPage: async({ page }, use) => {
             await use(new RegisterPage(page));
+        },
+
+        coursePage: async({ page }, use) => {
+            await use(new CoursesPage(page));
         },
     }
 );

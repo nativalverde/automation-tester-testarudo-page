@@ -1,4 +1,4 @@
-import { test, expect } from '../src/fixtures/index';
+import { test } from '../src/fixtures/index';
 import users from '../src/test-data/users.json'
 
 

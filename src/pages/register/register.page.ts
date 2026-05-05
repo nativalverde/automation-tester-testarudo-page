@@ -43,7 +43,12 @@ export class RegisterPage {
         await this.submitButton.click();
     }
 
+    async clickRegisterHere(){
+        await this.page.getByRole('link', { name: 'Regístrate aquí' }).click();
+    }
+
     async createAccount (name: string, email: string, password: string, confirm: string) {
+        await this.clickRegisterHere();
         await this.fillName(name);
         await this.fillEmail(email);
         await this.fillPassword(password);
