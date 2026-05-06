@@ -14,7 +14,7 @@ test.describe("Register",() => {
   });
 
 test('Register new user', async ({ page, registerPage }) => {
-  const email = `test${Date.now()}@mail.com`;
+  const email = `nata${Date.now()}@mail.com`;
   await registerPage.createAccount(users.newUser.name, email, passwords.newUser, passwords.newUser);
   await expect(page.getByText(email)).toBeVisible();
   await expect(page.getByText('Enviamos un enlace de')).toBeVisible();

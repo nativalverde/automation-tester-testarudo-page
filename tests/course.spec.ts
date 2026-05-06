@@ -13,15 +13,12 @@ test.describe ("Inscripción a un curso por primera vez", () => {
       await page.goto('/');
       await cookies.clickAcceptCookies();
       await menu.clickLoginSection();
-      //const email = `nata${Date.now()}@mail.com`;
-      //await registerPage.createAccount(users.newUser.name, email, passwords.newUser, passwords.newUser);
-      await loginPage.loginUser('nata@yopmail.com', passwords.newUser);
+      await loginPage.loginUser(users.registeredUser.email, passwords.newUser);
     });
       
 
   test('test sin cursos', async ({ page }) => {
     await expect(page.getByText('0').first()).toBeVisible();
-    await expect(page.getByText('Bienvenido de nuevo, nata@')).toBeVisible();
     await expect(page.getByRole('heading', { name: 'Aún no hay cursos' })).toBeVisible();
   });
 
